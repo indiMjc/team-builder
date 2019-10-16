@@ -1,10 +1,8 @@
 import React from "react";
 
 const MembersList = props => {
-  console.log(typeof props);
   return (
-    <>
-      {console.log(typeof props.members)}
+    <div className="members-card">
       {props.members.map((person, i) => (
         <div key={i++}>
           <p key={person.name}>Name: {person.name}</p>
@@ -12,7 +10,7 @@ const MembersList = props => {
           <p key={i}>Role: {person.role}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
